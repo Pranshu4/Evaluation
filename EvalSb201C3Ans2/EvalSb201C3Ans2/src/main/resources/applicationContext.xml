@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+xmlns:context="http://www.springframework.org/schema/context"
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd" >
+
+<bean id="s1" class="com.masai.Student">
+<property name="roll" value="1"/>
+<property name="name" value="Dhillon"/>
+<property name="address" value="AllahPur"/>
+<property name="email" value="dhillo@gmail.co"/>
+<property name="marks" value="100"/>
+
+</bean>
+<bean id="s2" class="com.masai.Student">
+<property name="roll" value="2"/>
+<property name="name" value="Pahadi"/>
+<property name="address" value="Uttrakhand"/>
+<property name="email" value="pahadi@gmail.co"/>
+<property name="marks" value="200"/>
+
+</bean>
+<bean id="s3" class="com.masai.Student">
+<property name="roll" value="3"/>
+<property name="name" value="AmraWati"/>
+<property name="address" value="Sonbhadra"/>
+<property name="email" value="amra@gmail.co"/>
+<property name="marks" value="400"/>
+
+</bean>
+
+<bean id="c1" class="com.masai.Course">
+<property name="courseId" value="1"/>
+<property name="courseName" value="Java"/>
+<property name="duration" value="3"/>
+<property name="fee" value="1000"/>
+
+
+</bean>
+<bean id="c2" class="com.masai.Course">
+<property name="courseId" value="2"/>
+<property name="courseName" value="DBMS"/>
+<property name="duration" value="4"/>
+<property name="fee" value="2000"/>
+
+
+</bean>
+<bean id="c3" class="com.masai.Course">
+<property name="courseId" value="3"/>
+<property name="courseName" value="JavaIT"/>
+<property name="duration" value="4"/>
+<property name="fee" value="3000"/>
+
+
+</bean>
+
+
+<bean id="StuSer" class="com.masai.StudentService" >
+<property name="appName" value="StudentApp"/>
+<property name="theMap">
+<map>
+
+<entry key-ref="s1" value-ref="c1"/>
+<entry key-ref="s2" value-ref="c2"/>
+<entry key-ref="s3" value-ref="c3"/>
+
+</map>
+
+</property>
+<property name="theList">
+<list>
+
+
+
+
+</list>
+
+
+
+</property>
+
+
+
+</bean>
+
+
+</beans>
